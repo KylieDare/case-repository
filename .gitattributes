@@ -1,0 +1,22 @@
+# Encrypt sensitive file types
+*.zip filter=git-crypt diff=git-crypt
+*.csv filter=git-crypt diff=git-crypt
+*.xlsx filter=git-crypt diff=git-crypt
+*.xls filter=git-crypt diff=git-crypt
+*.json filter=git-crypt diff=git-crypt
+
+# Encrypt entire cases directory (except README)
+cases/** filter=git-crypt diff=git-crypt
+!cases/**/README.md
+
+# Encrypt logs
+logs/** filter=git-crypt diff=git-crypt
+
+# Encrypt load reports
+LOAD_REPORT.md filter=git-crypt diff=git-crypt
+
+# Git-crypt metadata - do not encrypt
+.git-crypt/** diff=git-crypt merge=binary -text
+.gitattributes !filter !diff
+.gitignore !filter !diff
+GIT-CRYPT-SETUP.md !filter !diff

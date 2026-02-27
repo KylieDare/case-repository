@@ -1,0 +1,58 @@
+# Runtime files
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs (encrypted before commit)
+logs/*.log
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# GPG backup files
+*.gpg.bak
+secring.gpg
+
+# Credentials (should never be committed)
+.env
+credentials.json
+secrets.json
+*.key
+*.pem
+
+# Large temporary files
+*.iso
+*.exe
+*.msi
+temp/
+tmp/
+
+# Unencrypted archives (shouldn't happen, but just in case)
+# (git-crypt should encrypt these automatically)
+
+# Allow git-crypt and security files
+!/.git-crypt/
+!/.gitattributes
+!GIT-CRYPT-SETUP.md
+!setup-git-crypt.ps1
